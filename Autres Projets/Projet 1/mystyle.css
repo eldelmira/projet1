@@ -1,0 +1,85 @@
+header{
+    background-color:black;
+}
+
+body{
+    background-color: teal;
+}
+
+footer{
+    background-color: black;
+    text-align: left;
+}
+
+h1, p, h3{
+    background-color:white;
+}
+
+.cv{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color: #B59AF5;
+    /*background: linear-gradient(90deg, rgb(170, 4, 95) 22%, rgba(9,121,13,1) 63%, rgba(0,212,255,1) 100%);*/
+    border-radius: 10px;
+    padding-right: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px black;
+   ;
+}
+
+
+
+.nom{
+    
+    width: auto;
+
+    
+}
+.langue{
+    text-align: center;
+   
+   
+}
+
+
+.info{
+    
+    width: 500px;;
+    padding-left: 20px;
+    text-align: left;
+    
+}
+.image{
+    
+   float: right;
+   margin-right: 0vmax;
+   text-align: justify;
+   justify-items: left;
+   margin-top: 30px;
+   border-radius: 5px;
+   
+}
+
+h2, h3{
+    background-color: darkcyan;
+    width: auto;
+    border-radius: 30px;
+    text-align: center;
+    
+}
+
+.body2{
+    background-image:url(image2.jpg) ;
+}
+
+.lien{
+    text-align: center;
+}
+a{
+    border: 1px solid;
+    font-size: 30px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+}

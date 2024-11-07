@@ -1,0 +1,112 @@
+body, html{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #9796f0, #fbc7d4);
+
+    
+}
+
+
+@keyframes slide{
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100px);
+    }
+  }
+
+ h2{
+    color: darkcyan;
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+ }
+h2:hover{
+    
+    color: teal;
+}
+
+.container {
+    
+    
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    overflow: hidden;
+    
+}
+
+img{
+    max-width: 100%;
+}
+
+.menu {
+    position: absolute; 
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+a{
+    text-decoration: none;
+}
+/*
+.menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #aa0303;
+    border-radius: 50px;
+    margin: 0 0.2em 1em;
+   
+}
+    */
+
+.menu label:hover,.menu label:focus {
+    background: #1c87c9;
+}
+
+.int_slider{
+    opacity: 1;
+    
+}
+
+
+.img_input {
+    
+    width: 60%;
+    height: 300px;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-top-left-radius: 20px;
+    
+}
+
+.img_input:hover{
+    width: 600px;
+    height: 300px;
+}
+
+[id="slider1"]:checked + .img_input {
+    left: 0;
+    z-index: 100;
+    transition: left 0.20s;
+    box-shadow: 0 0 10px black;
+    top: 50px;
+}
