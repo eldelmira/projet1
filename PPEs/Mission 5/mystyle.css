@@ -1,0 +1,52 @@
+
+body{
+    background-image:url("image1.gif");
+   
+}
+
+
+
+div{
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  #312e2e;
+    width: 30%;
+    margin-top: 20%;
+    padding-top: 10px;
+    text-align: center;
+    height: fit-content;
+    padding-bottom: 10px;
+    border: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+div:hover{
+    opacity: 0.7;
+
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    color: white;
+}
+li{
+    list-style: none;
+}
+
+@media screen and (max-width: 560px){
+    body{
+        
+        background-image: url(image1.gif);
+        box-sizing: border-box;
+       
+    }
+    img {
+        width: 200px;
+        height: 300px;
+
+      }
+
+
+}

@@ -1,0 +1,50 @@
+label{
+    padding-right: 20px;
+   
+}
+
+body{
+    background: linear-gradient(to right, #e100ff 0%, #9f07e6 100%); 
+}
+
+
+
+textarea{
+    width: 300px;
+    height: 100px;
+}
+
+header{
+    width: 100%;
+    height:fit-content;
+    float: inline-end;
+    background-color: lightseagreen;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid;
+    
+    
+}
+
+/*
+table{
+    margin-right: auto;
+    margin-left: auto ;
+    width: 50%;
+    box-shadow: black;
+    border: 1px solid;
+    background-color: white;
+}
+    */
+
+form{
+    background-color: teal;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+}
+a{
+    text-decoration: none;
+}

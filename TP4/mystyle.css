@@ -1,0 +1,148 @@
+header{ 
+    background-color: teal;
+    text-align: center;
+}
+
+body{
+    background: linear-gradient(to right, rgba(2,0,36,1) 12%, rgba(9,9,121,1) 49%, rgba(0,212,255,1) 100%);
+
+}
+
+
+
+.carre1{
+    
+    margin-left: 20px;
+    width: 30%;
+    
+    border: 2px solid black;
+    border-color: rgb(42, 238, 35);
+    background-color: brown;
+    display: inline-block;
+   
+}
+
+.carre2{
+    margin-left: 20px;
+    width: 30%;
+    border: 2px solid black;
+    border-color: rgba(65, 35, 238, 0.87);
+    
+    background-color: rgb(165, 42, 73);
+    display: inline-block;
+   
+}
+
+.carre3{
+ 
+    width: 30%;
+    border: 1px solid black;
+    border-color: rgb(35, 238, 62);
+    
+    background-color: rgb(42, 165, 97);
+    display: inline-block;
+   
+}
+/*
+.block3{
+    
+    height: 200px;
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 10px ;
+    background-color: blueviolet;
+   
+}
+
+.block4{
+    margin-left: 20px;
+    height: 200px;
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    background-color: rgb(226, 43, 195);
+    clear: both;
+}
+*/
+
+h1{
+    text-align: center ;
+    border: 2px solid;
+    border-color: blueviolet;
+}
+
+.sousblock1{
+    background-color: teal;
+}
+
+.sousblock2{
+    background-color: teal;
+}
+
+.sousblock3{
+    background-color: teal;
+}
+
+.block1{
+    background-color: #0000ff;
+    float:left;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+
+body{
+    background-color: teal;
+}
+
+.block2{
+    margin-left: 20px;
+    height: 200px;
+    width: 150px;
+    
+    background-color: brown;
+    float: right;
+}
+.block3{
+    margin-left: 20px;
+    height: 180px;
+    width: 150px;
+    
+    background-color: blueviolet;
+    clear: both;
+}
+
+@media screen and (max-width:750px){
+
+
+
+body{
+    /*
+    background-color: darkslategray;
+    */
+    background: linear-gradient(to right, rgba(2,0,36,1) 12%, rgba(9,9,121,1) 49%, rgba(0,212,255,1) 100%);
+
+}
+header{
+    background-color: teal;
+}  
+} 
+@media screen and (max-width:450px){
+
+
+
+body{
+    background-color: darkslategray;
+}
+header{
+    background-color: teal;
+} 
+}  
+
+.tp{
+    text-decoration: none;
+    list-style: none;
+}
+
+

@@ -1,0 +1,275 @@
+nav > ul > li{
+    float:left;
+    position:relative;
+   
+    
+}
+
+nav > ul > li:hover a{
+    padding: 15px 30px 20px 30px;
+    
+ 
+}
+
+
+nav .sousmenu {
+    display: none; /* Masquer le sous-menu par défaut */
+    position: absolute;
+    left: 5px;
+    top: 100%;
+    margin: auto;
+    cursor: pointer;
+
+  
+    
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+    color: inherit;
+    font: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+a, ul{
+    
+    list-style: none;
+    text-decoration: none;
+    padding: auto;
+    padding-left: 50px;
+    padding-top: 10px;
+    font-size: 16px;
+    color: white;
+    height: 60px;
+    border-top-left-radius: 10px;
+    margin: 20px;
+    padding-top: 16px;
+    
+    
+    
+}
+
+li{
+    padding-bottom: 7px;
+    padding: auto;
+    padding-block: 10px;
+   
+}
+
+footer {
+   
+
+ display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+}
+
+
+nav > ul{
+    display: inline-block;
+    box-shadow: 0 0 14px black;
+     
+    
+}
+
+
+nav > ul::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.sousmenu{
+    display: none;
+    position: absolute; 
+    z-index: 10px;
+    padding-bottom: 30px;
+    border-spacing: 2em;
+    box-shadow:0 0 15px black;
+    height: fit-content;
+    background-color: #45a1ff;
+    
+    
+    
+    
+    
+}
+
+
+.sousmenu li:hover a{
+    color: #EEE;
+    font-weight: bold;
+    border:  1px solid lightslategray;
+    border-radius: 10px;
+    margin-bottom: 12px;
+   
+    
+     
+    
+}
+
+.nav .sousmenu li:hover{
+    display: block;
+    background-color: RGB(210,77,60);
+   
+}
+
+
+nav li:hover .sousmenu{
+    display:block;
+    border: 1px solid red;
+    
+    
+}
+
+
+.none{
+    display: none;
+}
+
+
+nav {
+    
+    background-color: black; 
+    padding-block: 20px; 
+}
+
+
+
+nav .sousmenu li {
+    background-color:#000000;
+    width: fit-content;
+
+    
+}
+ 
+
+ nav  .sousmenu li:hover{
+opacity: 0.8;
+ }
+nav input[type=checkbox]:checked ~ ul{
+    display: block;
+}
+
+@media screen and (max-width: 680px){
+    .none{
+        flex-direction: column; /* Stack items on smaller screens */
+        display: block;
+        color: #fff;
+        background-color: rgba(29, 197, 151,0.97);
+        text-align: center;
+        padding: 12px 0;
+        padding-bottom: 30px;
+       
+    }
+
+    .sousmenu{
+        display: none;
+        text-transform: capitalize;
+        border-radius:  1px solid teal;
+        border-spacing: 2em;
+        box-sizing: border-box;
+            
+    }
+
+    .sousmenu:hover{
+        display:flexbox;
+    }
+
+    nav > ul{
+        display: none;
+        height: fit-content;
+    }
+
+    nav > ul > li {
+        width: 100%; /* Full width for list items */
+        padding-bottom: 20px;
+        
+       
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: inherit;
+        color: inherit;
+        font: inherit;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+    }
+    
+    a, ul{
+        list-style: none;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        
+    }
+
+    nav .sousmenu {
+        display: none; /* Masquer le sous-menu par défaut */
+        position:relative;
+        left: 5px;
+        top: 100%;
+        margin: auto;
+        cursor: pointer;
+        border-bottom: 3px solid red;
+}
+}
+
+nav .html:hover{
+    border-top: 5px solid blueviolet ;
+    background-color: RGBa(228, 77, 38,0.15);
+    
+    
+    
+    
+    
+    
+}
+
+nav .javascript:hover{
+    border-top: 5px solid green ;
+    background-color: RGBa(228, 77, 38,0.15);
+    opacity: 0.7;
+}
+
+nav .bdd:hover{
+    border-top: 5px solid darkcyan ;
+    background-color: RGBa(228, 77, 38,0.15);
+    opacity: 0.8;
+    
+}
+
+nav .php:hover{
+    border-top: 5px solid pink ;
+    background-color: RGBa(228, 77, 38,0.15);
+    opacity: 0.8;
+}
+nav .mission:hover{
+    border-top: 5px solid rgb(245, 127, 17) ;
+    background-color: RGBa(228, 77, 38,0.15);
+    opacity: 0.8;
+}
+nav .certification:hover{
+    border-top: 5px solid midnightblue ;
+    background-color: RGBa(228, 77, 38,0.15);
+    opacity: 0.8;
+}
+nav .projects:hover{
+    border-top: 5px solid darkred ;
+    background-color: RGBa(228, 77, 38,0.15);
+    opacity: 0.8;
+}

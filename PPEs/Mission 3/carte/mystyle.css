@@ -1,0 +1,63 @@
+.carte{
+  
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: rgb(239, 243, 240);
+    perspective: 23rem;
+    padding-top: 20px;
+    width: 40%;
+    transition-duration: 0.4s;
+    box-shadow:0 0 10px black;
+    
+    
+    
+}
+
+
+.carte:hover{
+
+    opacity: 0.7;
+    
+}
+
+.profile{
+    
+    
+    
+    padding: 10 px ;
+    border: 3px solid;
+    border-color: lightseagreen;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+
+}
+.name1{
+    text-align: center;
+    color: lightseagreen;
+    padding: 0%;
+}
+
+.info{
+    text-align: center;
+    color: mediumslateblue;
+    font-family: serif;
+}
+
+.reseau{
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(104, 124, 238);
+    text-decoration: none;
+    display: inline;
+    padding: 10px;
+    padding-left: 47px;
+    padding-right: 45px;
+    
+    
+}

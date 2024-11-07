@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="facture.js"></script>
+</head>
+<body>
+    <h1>Facture en JavaScript</h1>
+    <center>
+    <table border="2px">
+        <tr>
+            <th class="produit">Article</th>
+            <th class="produit">Prix</th> 
+            <th class="produit">Quantité</th>
+            <th class="produit">Résultat</th>    
+        </tr>
+
+        <!-- Ligne 1 -->
+        <tr>
+            <td><input type="text" placeholder="E1" id="E1"></td>
+            <td><input type="number" placeholder="12" id="t1"></td>
+            <td><input type="number" placeholder="10" id="t4"></td>
+            <td><input type="number" placeholder="Résultat" id="t7" readonly></td>
+        </tr>
+
+        <!-- Ligne 2 -->
+        <tr>
+            <td><input type="text" placeholder="E2" id="E2"></td>
+            <td><input type="number" placeholder="10" id="t2"></td>
+            <td><input type="number" placeholder="1" id="t5"></td>
+            <td><input type="number" placeholder="Résultat" id="t8" readonly></td>
+        </tr>
+
+        <!-- Ligne 3 -->
+        <tr>
+            <td><input type="text" placeholder="E3" id="E3"></td>
+            <td><input type="number" placeholder="12" id="t3"></td>
+            <td><input type="number" placeholder="2" id="t6"></td>
+            <td><input type="number" placeholder="Résultat" id="t9" readonly></td>
+        </tr>
+
+        <!-- Ligne de total et de boutons -->
+        <tr>
+            <td colspan="2">
+                <button class="button1" onclick="reinitialiser()">Réinitialiser</button>
+            </td>
+            <td>
+                <button class="button2" onclick="calculerResultat()">Calculer</button>
+            </td>
+            <td>
+                <input type="text" placeholder="Résultat total" id="t10" readonly>
+            </td>
+        </tr>
+    </table>
+    <button><a href="../index.html">Retour</a></button>
+    </center>
+</body>
+</html>

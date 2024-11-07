@@ -1,0 +1,36 @@
+body{
+    background-color: grey;
+}
+
+button{
+    border-radius: 25px;
+    width: 240px;
+    height: 200px;
+    background-color: black;
+    border: 2px solid white;
+    font-size: 2em;
+    color: white;
+    margin: 30px;
+    transition: 0.2s;
+}
+button:hover{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    transition: 150ms;
+}
+
+footer {
+   
+
+    display: flex;
+       justify-content: center;
+       padding: 5px;
+       background-color: #45a1ff;
+       color: #fff;
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       
+   }

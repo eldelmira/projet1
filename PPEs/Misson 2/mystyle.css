@@ -1,0 +1,19 @@
+a{
+    list-style: none;
+    text-decoration: none;
+    text-align:center ;
+}
+
+.image{
+    border-radius: 70px;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+label{
+    text-align :center;
+}
+

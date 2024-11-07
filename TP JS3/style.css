@@ -1,0 +1,56 @@
+body{
+    display: block;
+    background-color: cadetblue;
+}
+
+.produit{
+    width: 100px;
+    margin: 20px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button1{
+    width: max-content;
+}
+
+h1{
+    text-align: center;
+    font-family: cursive;
+    color: coral;
+}
+.input{
+    display: block;
+    text-align: center;
+    
+}
+
+
+.produit{
+    padding: 5px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    width: 260px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button{
+    background-color: lightgray;
+    border: 5px solid black;
+    border-radius: 10px;
+    bottom: 0;
+}
+
+table{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    background-color: teal;
+    padding: 20px ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+
+}
