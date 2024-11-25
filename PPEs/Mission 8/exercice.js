@@ -6,31 +6,39 @@ function exercice1(){
     let b = prompt('Choisisez un nombre')
     let Resultat1 = Number(a)+Number(b)
     document.write(Resultat1)
+    document.write("<br><button><a href='index.html'>Retour</button>")
 }
 
 // Exercice 1 voir résultat
 function p1(){
     document.write("<code>function exercice1(){<br>let a = prompt('Choisisez un nombre')<br>let b = prompt('Choisisez un nombre')<br>let Resultat1 = Number(a)+Number(b)<br>document.write(Resultat1)</code>")
+    document.write("<br><button><a href='index.html'>Retour</button>")
 }
 
-// Exercice 2 démonstration
+// Exercice 3 démonstration
+
 function affiche(){
+    
     let a = prompt("Enter un nombre")
     for (var i=1; i<Number(a); i++)
         
     {
         document.write(i+"<br>")
+        
     }
 
 }
 
-// Exercice 2 voir résultat
+
+// Exercice 3 voir résultat
 function p3(){
     document.write("<code>function affiche(){<br>let a = prompt('Enter un nombre')<br>for (var i=0; i<Number(a); i++){<br>{document.write(i+'<br>')}}</code>");
+    document.write("<br><button><a href='index.html'>Retour</button>") 
 }
 
-// Exercice 3 démonstration
+// Exercice 2 démonstration
 function type1() {
+    
     let a = prompt("Entrez quelque chose");
     
     if (a === null) {
@@ -45,9 +53,10 @@ function type1() {
     } else {
         document.write("Type : string");
     }
+    document.write("<br><button><a href='index.html'>Retour</button>") 
 }
 
-// Exercice 3 voir résultat
+// Exercice 2 voir résultat
 
 function p2(){
     document.write("<code>function type1() {<br>let a = prompt('Entrez quelque chose');<br>if (a === null) {<br>document.write('Type : null');return;}<br>if (!isNaN(a) && a.trim() !== '') {<br>document.write('Type : number');} else if (a.toLowerCase() === 'true' || a.toLowerCase() === 'false') {document.write('Type : boolean');}<br> else {document.write('Type : string');}}</code>");
@@ -163,7 +172,7 @@ document.write("<code>function occur(){<br>let nb = 0;<br>let mot = String(promp
 }
 
 // Exercice 9
-function affiche(){
+function affiche1(){
     document.write('<table border=2px width=30% height=100px>')
    
     c = Number(prompt("Entrer un chiffre en 1 et 4"))
