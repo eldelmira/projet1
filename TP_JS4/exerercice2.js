@@ -110,3 +110,41 @@ function seconnecter3(){
         }
     }
 
+
+   
+    function facture() {
+        let prixTotalProduits = 0; // Initialiser le total des produits à 0
+        let continuer = "true"; // Définir une variable pour contrôler la boucle
+    
+        do {
+            // Saisir les détails du produit
+            let nom = prompt("Veuillez écrire le nom du produit");
+            let prix = Number(prompt("Veuillez écrire le prix du produit"));
+            let quantité = Number(prompt("Veuillez écrire la quantité du produit"));
+    
+            // Calculer le coût total pour ce produit
+            let coûtProduit = prix * quantité;
+    
+            // Ajouter au total des produits
+            prixTotalProduits += coûtProduit;
+    
+            // Afficher les informations du produit
+            document.write("Nom: " + nom + "<br>");
+            document.write("Prix unitaire: " + prix + " €<br>");
+            document.write("Quantité: " + quantité + "<br>");
+            document.write("Total pour ce produit: " + coûtProduit + " €<br><br>");
+    
+            // Demander si l'utilisateur veut continuer
+            continuer = prompt("Voulez-vous continuer ? (true/false)");
+        } while (continuer === "true");
+    
+        // Afficher le total final des produits
+        document.write("<strong>Prix total des produits: " + prixTotalProduits + " €</strong><br>");
+
+    }
+
+    function annuler(){
+        window.location.href="index.html"
+    }
+    
+    
