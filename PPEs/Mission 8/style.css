@@ -107,4 +107,23 @@ h5{
     font-style: normal;
     font-size: medium;
 }
+
+
+@media screen and (max-width:768px){
+
+
+
+    body{
+        width: 100%;
+    }
+    .main{
+        width: 100%;
+        margin-bottom: 50px;
+        bottom: 50px;
+        padding-top: 70px;
+    }
+    
+   
+    
+} 
     
