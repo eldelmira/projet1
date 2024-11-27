@@ -270,13 +270,14 @@ function jeu1(){
       document.write("<br><button><a href='index.html'>Retour</button>") 
    
 }
+// Exercice 12 voir la solution
 
 function p12(){
 document.write("<code>function jeu1(){<br>nb=0<br>for(i=1;i<=5;i++){let a = Math.floor(Math.random() * 7);<br>if (a===6){<br>nb++;<br>}<br>else{<br>document.write('Ce n'est pas 6, c'est : ' + a + '<br>');<br}<br>} document.write('Nombre total de 6 générés : ' + nb + '<br>');<br>}</code>")
 document.write("<br><button><a href='index.html'>Retour</button>") 
 }
 
-//Exercice 13
+//Exercice 13 démonstration
 //𝑥3 − 3𝑥 + 1
 function f() {
     // Demander les valeurs à l'utilisateur
@@ -294,13 +295,14 @@ function f() {
     );
     document.write("<br><button><a href='index.html'>Retour</button>") 
 }
+// Exercice 13 voir la solution
 
 function p13(){ 
 document.write("<code>function f() {<br><!-- Demander les valeurs à l'utilisateur--><br>let x = Number(prompt('Entrez un nombre pour x :'));<br>let a = Number(prompt('Entrez une puissance a :'));<br>let b = Number(prompt('Entrez un coefficient b :'));<br>let c = Number(prompt('Entrez une constante c :'));<br><br><!--Calculer la valeur de la fonction--><br>let resultat = x ** a - b * x + c;<br><!--Afficher la fonction et son résultat--><br>document.write('La fonction : f(x) = '+' '+x+' '+'**'+' '+a+''+'-'+''+ b+''+'*'+''+x+'' + '+'+' '+ c+''+' ' +'est égale à '+' '+resultat);<br>}</code>")
 document.write("<br><button><a href='index.html'>Retour</button>") 
 }
 
-// Exercice 14
+// Exercice 14 démonstration
 function longueur(){
     mot = String(prompt('Veuiller saisir un mot'));
     mot1 = String(prompt('Veuiller saisir un mot'));
@@ -314,6 +316,7 @@ function longueur(){
     document.write("<br><button><a href='index.html'>Retour</button>") 
 }
 
+// Exercice 14 voir la solution
 
 function p14(){ 
 
@@ -321,7 +324,7 @@ document.write("<code>function longueur(){<br>mot = String(prompt('Veuiller sais
 document.write("<br><button><a href='index.html'>Retour</button>") 
 }
 
-//Exercice 15
+//Exercice 15 démonstration
 
 function date(){
     a = Number(prompt('Entrer votre année de naissance:'));
@@ -332,6 +335,7 @@ function date(){
 ;
 }
 
+// Exercice 15 voir solution
 function p15(){
 
 document.write("<code>function date(){<br>a = Number(prompt('Entrer votre année de naissance:'));<br>b = Number(prompt('Entrer votre année actuelle:'))<br>age = b-a<br>document.write('Vous avez'+' '+age+' '+'ans.');<br>}</code>")
@@ -340,3 +344,94 @@ document.write("<br><button><a href='index.html'>Retour</button>")
 }
 
 
+
+function saveButton() {
+    const exercices = []; // Liste des exercices
+
+    // Parcourir toutes les sections d'exercices
+    const sections = document.querySelectorAll(".section");
+    sections.forEach((section, index) => {
+        const exercice = {}; // Objet pour un exercice
+
+        // Récupérer la question
+        const questionElement = section.querySelector("p.Question");
+        if (questionElement) {
+            exercice.question = questionElement.textContent.trim();
+        }
+
+        // Récupérer les fonctions associées
+        const solutionFunctionName = `p${index + 1}`;
+        const demonstrationFunctionName = getDemonstrationFunctionName(index + 1);
+
+        // Ajouter la solution (code)
+        if (typeof window[solutionFunctionName] === "function") {
+            exercice.solution = formatCode(window[solutionFunctionName]);
+        } else {
+            exercice.solution = "Solution non définie.";
+        }
+
+        // Ajouter la démonstration (code)
+        if (typeof window[demonstrationFunctionName] === "function") {
+            exercice.demonstration = formatCode(window[demonstrationFunctionName]);
+        } else {
+            exercice.demonstration = "Démonstration non définie.";
+        }
+
+        // Ajouter l'exercice complet à la liste
+        exercices.push(exercice);
+    });
+
+    // Convertir en JSON
+    const jsonData = JSON.stringify(exercices, null, 2);
+
+    // Générer le fichier JSON
+    const blob = new Blob([jsonData], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    // Créer un lien pour télécharger
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "exercices.json";
+    document.body.appendChild(link);
+    link.click(); // Lancer le téléchargement
+    document.body.removeChild(link);
+
+    // Libérer l'URL
+    URL.revokeObjectURL(url);
+}
+
+// Fonction pour formater le code
+function formatCode(func) {
+    return func
+        .toString()
+        .replace(/^\s*|\s*$/g, "") // Supprimer espaces au début/fin
+        .replace(/\s{2,}/g, " ")   // Remplacer plusieurs espaces par un seul
+        .replace(/</g, "&lt;")    // Échapper caractères spéciaux
+        .replace(/>/g, "&gt;");
+}
+
+// Fonction pour récupérer le nom de la fonction démonstration
+function getDemonstrationFunctionName(index) {
+    switch (index) {
+        case 1: return "exercice1";
+        case 2: return "type1";
+        case 3: return "affiche";
+        case 4: return "factorielle";
+        case 5: return "tableMultiplication";
+        case 6: return "tva";
+        case 7: return "pairs";
+        case 8: return "occur";
+        case 9: return "affiche1"
+        case 10: return "jeu"
+        case 11: return "maximum"
+        case 12: return "jeu1"
+        case 13: return "f"
+        case 14: return "longueur"
+        case 15: return "date"
+       
+        
+
+        // Ajouter d'autres correspondances pour les exercices suivants si nécessaire
+        default: return null;
+    }
+}

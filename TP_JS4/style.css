@@ -22,7 +22,8 @@ button{
     border: 5px solid black;
     border-radius: 10px;
     bottom: 0;
-    height: 50px;
+    height: 46px;
+    text-align: center;
 }
 
 button:hover{
@@ -32,7 +33,7 @@ button:hover{
     font-weight: bold;
     color: darkblue;
     
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px rgb(102, 67, 67);
     border-style: outset;
 
 }
@@ -64,4 +65,39 @@ footer{
 
 }
 
+@media screen and (max-width:768px){
 
+
+
+    body{
+        width: 100%;
+        text-align: justify;
+        justify-content: center;
+        display: block;
+    }
+    button{
+        display:grid;
+        grid-template-columns:repeat(2,80px);
+        grid-template-rows:repeat(2,60px);
+        text-align: start;
+        width: 51%;
+        padding-right: 37px;
+        margin: 20px;
+        grid-gap:2px;
+        
+    }
+    h1 {
+        color: rgb(248, 213, 170);
+        text-align: center;
+    }
+    .mytable{
+
+    display: inline-table;
+    color:pink ;
+    border:1px;
+    width:100%;
+    text-align: left;
+    
+    }
+    
+}
