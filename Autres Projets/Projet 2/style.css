@@ -47,6 +47,19 @@ button{
 }
 
 
+@media screen and (max-width:750px){
 
+
+
+    body{
+        background-color: darkslategray;
+        display: block;
+
+    }
+    .chrono{
+        padding-right: 700px;
+        font-size:x-large;
+    }
+}   
 
 

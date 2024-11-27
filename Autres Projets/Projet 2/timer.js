@@ -1,5 +1,6 @@
-// timer.js
-let timerInterval;  // Variable to store the interval ID
+
+
+let timerInterval; // Variable to store the interval ID
 let elapsedTime = 0; // Store elapsed time in milliseconds
 let isPaused = false;
 
@@ -16,12 +17,15 @@ function formatTime(ms) {
 // Function to update the time display
 function updateDisplay() {
     const timeDisplay = document.querySelector('.chrono time');
-    timeDisplay.textContent = formatTime(elapsedTime);
+    if (timeDisplay) {
+        timeDisplay.textContent = formatTime(elapsedTime);
+    }
 }
 
 // Start the timer
 function start() {
     if (!timerInterval) {
+        isPaused = false; // Ensure the timer is not paused
         timerInterval = setInterval(() => {
             if (!isPaused) {
                 elapsedTime += 1000;
@@ -33,23 +37,20 @@ function start() {
 
 // Pause the timer
 function pause() {
-    isPaused = true;
+    isPaused = true; // Set pause flag to true
 }
 
-// Stop and reset the timer
-function stop() {
-    clearInterval(timerInterval);
-    timerInterval = null;
-    elapsedTime = 0;
-    isPaused = false;
-    updateDisplay();
+// Continue the timer
+function continuer() {
+    isPaused = false; // Set pause flag to false
 }
 
-// Reset and restart the timer
+// Reset the timer
 function reset() {
-    elapsedTime = 0;
-    isPaused = false;
-    updateDisplay();
+    clearInterval(timerInterval); // Clear the interval
+    timerInterval = null; // Reset interval ID
+    elapsedTime = 0; // Reset elapsed time
+    isPaused = false; // Unpause the timer
+    updateDisplay(); // Update the display
 }
-
 

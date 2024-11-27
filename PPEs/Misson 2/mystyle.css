@@ -17,3 +17,24 @@ label{
     text-align :center;
 }
 
+@media screen and (max-width:768px){
+
+
+
+    body{
+        width: 100%;
+        text-align: justify;
+        justify-content: center;
+        
+    }
+    a{
+        font-size: small;
+    }
+    h1{
+        font-size: medium;
+    }
+    
+    
+}
+
+
