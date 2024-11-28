@@ -80,8 +80,8 @@ button:hover{
 }
 
 .section{
-   
-    background-color: rgb(255, 255, 255); 
+   background-color: #E3F2FD;
+    /*background-color: rgb(255, 255, 255); */
     padding: 20px;
     border-radius: 10px;
     margin: 10px;

@@ -238,13 +238,13 @@ function maximum(){
         L.push(i)
         
     }
-    document.write("L'inverse de la liste de L est:'+ ' ',L.reverse()")
+    document.write("L'inverse de la liste de L est:"+ '   ',L.reverse() )
     document.write("<br><button><a href='index.html'>Retour</button>") 
 }
 
-//Exercice 10 voir la solution
+//Exercice 11 voir la solution
 function p11(){
-document.write("<code>function maximum(){<br>let L = [];<br>let a = Number(prompt('Enter un nombre'));<br>for(i=0; i<=a; i++){<br>L.push(i)<br>}<br>document.write('L//inverse de la liste de L est:'+ ' ',L.reverse())<br>}</code>")
+document.write("<code>function maximum(){<br>let L = [];<br>let a = Number(prompt('Enter un nombre'));<br>for(i=0; i<=a; i++){<br>L.push(i)<br>}<br>document.write('L'inverse de la liste de L est:'+ ' ',L.reverse())<br>}</code>")
 document.write("<br><button><a href='index.html'>Retour</button>") 
 }
 
