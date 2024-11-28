@@ -83,6 +83,7 @@ footer {
 nav > ul{
     display: inline-block;
     box-shadow: 0 0 14px rgb(10, 10, 10);
+    background-color: black;
     
      
     
@@ -211,6 +212,9 @@ nav input[type=checkbox]:checked ~ ul{
         padding-bottom: 20px;
         
        
+    }
+    nav{
+        background-color: black;
     }
     body{
         margin: 0;
