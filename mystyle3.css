@@ -14,7 +14,7 @@ nav > ul > li:hover a{
 
 nav .sousmenu {
     display: none; /* Masquer le sous-menu par défaut */
-    position: absolute;
+    position:absolute;
     left: 5px;
     top: 100%;
     margin: auto;
@@ -52,12 +52,15 @@ a, ul{
     
     
     
+    
 }
 
 li{
     padding-bottom: 7px;
     padding: auto;
     padding-block: 10px;
+    
+    
    
 }
 
@@ -79,7 +82,8 @@ footer {
 
 nav > ul{
     display: inline-block;
-    box-shadow: 0 0 14px black;
+    box-shadow: 0 0 14px rgb(10, 10, 10);
+    
      
     
 }
@@ -95,11 +99,13 @@ nav > ul::after {
     display: none;
     position: absolute; 
     z-index: 10px;
-    padding-bottom: 30px;
-    border-spacing: 2em;
+    padding-bottom: 10px;
+    border-spacing: 1em;
     box-shadow:0 0 15px black;
     height: fit-content;
     background-color: #45a1ff;
+    width: 200px;
+    
     
     
     
@@ -123,13 +129,18 @@ nav > ul::after {
 .nav .sousmenu li:hover{
     display: block;
     background-color: RGB(210,77,60);
+    width: 100px;
    
 }
 
 
 nav li:hover .sousmenu{
-    display:block;
+    display:list-item;
     border: 1px solid red;
+    padding-top: 3px;
+    width: fit-content;
+    padding-right: 90px;
+    
     
     
 }
@@ -143,15 +154,16 @@ nav li:hover .sousmenu{
 nav {
     
     background-color: black; 
-    padding-block: 20px;
-    height: 100px; 
+    padding-block: 10px;
+    height:90px;
+     
 }
 
 
 
 nav .sousmenu li {
     background-color:#000000;
-    width: fit-content;
+   
 
     
 }

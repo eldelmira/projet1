@@ -8,7 +8,8 @@ h1{
 }
 
 body{
-    background-color: rgb(242, 244, 247);
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);">
+    /*background-color: rgb(242, 244, 247);*/
     /*background-color: rgb(255, 134, 113);*/
 }
 
@@ -76,11 +77,20 @@ button{
 }
 
 button:hover{
-    background-color: lime;
+    background-color: turquoise;
 }
 
 .section{
-   background-color: #E3F2FD;
+   /* Exercice Blocks */
+
+    background: linear-gradient(to bottom, #51fd93, #63c49c); /* Dégradé blanc subtile */
+    border: 1px solid #ddd; /* Bordure grise claire */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px;
+    margin-bottom: 15px; /* Espacement entre les blocs */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de surélévation */
+
+
     /*background-color: rgb(255, 255, 255); */
     padding: 20px;
     border-radius: 10px;
@@ -92,6 +102,9 @@ button:hover{
 
 .section:hover{
     opacity: 0.9 ;
+    top: 20px;
+    width: 700px;
+    
 }
 
 
