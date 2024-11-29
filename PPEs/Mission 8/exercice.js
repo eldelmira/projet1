@@ -33,7 +33,7 @@ function affiche(){
 
 // Exercice 3 voir résultat
 function p3(){
-    document.write("<code>function affiche(){<br>let a = prompt('Enter un nombre')<br>for (var i=0; i<Number(a); i++){<br>{document.write(i+'<br>')}}</code>");
+    document.write("<code>function affiche(){<br>let a = prompt('Enter un nombre')<br>for (var i=0; i<Number(a)+1; i++){<br>{document.write(i+'<br>')}}</code>");
     document.write("<br><button><a href='index.html'>Retour</button>") 
 }
 
