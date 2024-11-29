@@ -20,7 +20,7 @@ function p1(){
 function affiche(){
     
     let a = prompt("Enter un nombre")
-    for (var i=1; i<Number(a); i++)
+    for (var i=1; i<Number(a)+1; i++)
         
     {
         document.write(i+"<br>")
