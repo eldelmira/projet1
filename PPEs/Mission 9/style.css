@@ -8,8 +8,19 @@ h2{
     text-align: center;
     color: blue;
 }
+h4{
+    color: rgb(255, 115, 0);
+    
+}
 
+h4:hover{
+    color: rgb(255, 51, 0);
+    font-weight: bold;
+}
 
+h5{
+    font-size: large;
+}
 
 /* Applique un style global à la page */
 body {
