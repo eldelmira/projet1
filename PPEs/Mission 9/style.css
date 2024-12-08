@@ -1,0 +1,77 @@
+h3{
+    text-align: right;
+    font-style: italic;
+    color: brown;
+}
+
+h2{
+    text-align: center;
+    color: blue;
+}
+
+
+
+/* Applique un style global à la page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Couleur de fond douce */
+}
+
+/* Centrer les div globalement */
+div {
+    display: flex-box;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec 50% de transparence */
+    color: white; /* Texte blanc */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    transition: opacity 0.5s ease;
+    
+   
+}
+
+section{
+    
+    
+}
+
+/* Style des boutons */
+button {
+    background-color: #007BFF; /* Couleur bleue */
+    color: red;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Supprime le style des liens dans les boutons */
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Ajoute un effet de survol aux boutons */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style des titres */
+h2, h3, h4, h5 {
+    margin: 0 0 10px 0;
+   
+    
+}
+
+/* Espace entre les lignes d'input */
+input {
+    margin-bottom: 10px;
+}

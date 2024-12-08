@@ -2,9 +2,9 @@
 
 // Exercice 1 démonstration
 function exercice1(){
-    let a = prompt('Choisisez un nombre')
+    let a = prompt('Choisisez un nombre')// créations d'une variable interactive 
     let b = prompt('Choisisez un nombre')
-    let Resultat1 = Number(a)+Number(b)
+    let Resultat1 = Number(a)+Number(b)// fait l'addition entre a et b
     document.write(Resultat1)
     document.write("<br><button><a href='index.html'>Retour</button>")
 }
@@ -281,10 +281,10 @@ document.write("<br><button><a href='index.html'>Retour</button>")
 //𝑥3 − 3𝑥 + 1
 function f() {
     // Demander les valeurs à l'utilisateur
-    let x = Number(prompt('Entrez un nombre pour x :'));
-    let a = Number(prompt('Entrez une puissance a :'));
-    let b = Number(prompt('Entrez un coefficient b :'));
-    let c = Number(prompt('Entrez une constante c :'));
+    let x = Number(prompt('Entrez un nombre pour x :'));// créations d'une variable interactive du type Nombre
+    let a = Number(prompt('Entrez une puissance a :'));// créations d'une variable interactive du type Nombre
+    let b = Number(prompt('Entrez un coefficient b :'));// créations d'une variable interactive du type Nombre
+    let c = Number(prompt('Entrez une constante c :'));// créations d'une variable interactive du type Nombre
 
     // Calculer la valeur de la fonction
     let resultat = x ** a - b * x + c;
@@ -327,7 +327,7 @@ document.write("<br><button><a href='index.html'>Retour</button>")
 //Exercice 15 démonstration
 
 function date(){
-    a = Number(prompt('Entrer votre année de naissance:'));
+    a = Number(prompt('Entrer votre année de naissance:'));// créations d'une variable interactive du type Nombre
     b = Number(prompt('Entrer votre année actuelle:'))
     age = b-a
     document.write('Vous avez'+' '+age+' '+'ans.')
@@ -342,6 +342,50 @@ document.write("<code>function date(){<br>a = Number(prompt('Entrer votre année
 document.write("<br><button><a href='index.html'>Retour</button>") 
 
 }
+
+
+
+
+// Exercice 16 démonstration
+
+function nom(){ 
+    // créations d'une variable interactive
+    let nom = prompt("Quelle est votre nom de famille: ") 
+    genre = prompt("Quelle est votre genre ")
+    // Prendre le type du genre(homme, femme, jeune fille) et renvoie le nom de l'utilisateur accompagner du genre)
+    if (genre == 'Monsieur'){
+        document.write('Bonjour'+ ' '+genre+' '+ nom)
+    }
+    else if(genre == 'Madame') {
+        document.write('Bonjour'+ ' '+genre+' '+ nom)
+    }
+    else{
+        document.write('Bonjour'+ ' '+genre+' '+ nom)
+    }
+
+}
+
+function p16(){ 
+document.write("<code>function nom(){ <br>let nom = prompt('Quelle est votre nom de famille: ')<br><br>genre = prompt('Quelle est votre genre ')<br>if (genre == 'Monsieur'){<br>document.write('Bonjour'+ ' '+genre+' '+ nom)}<br>else if(genre == 'Madame') {<br>document.write('Bonjour'+ ' '+genre+' '+ nom)}<br>else{<br>document.write('Bonjour'+ ' '+genre+' '+ nom)}<br>}</code>")
+
+}
+
+function genererMotDePasse() {
+    longueur = Number(prompt("Veuillez entrer un nombre"))
+    const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let motDePasse = "";
+    for (let i = 0; i < longueur; i++) {
+        const index = Math.floor(Math.random() * caracteres.length);
+        motDePasse += caracteres[index];
+    }
+    document.write(motDePasse);
+}
+
+function p17(){ 
+document.write("function genererMotDePasse() {<br>longueur = Number(prompt('Veuillez entrer un nombre'))<br>const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';<br>let motDePasse = '';<br>for (let i = 0; i < longueur; i++) {<br>const index = Math.floor(Math.random() * caracteres.length);<br>motDePasse += caracteres[index];<br>}<br>document.write(motDePasse);}<br>")
+}
+
+
 
 
 
@@ -428,10 +472,15 @@ function getDemonstrationFunctionName(index) {
         case 13: return "f"
         case 14: return "longueur"
         case 15: return "date"
-       
+        case 16: return "nom"
+        case 17: return "genererMotDePasse"
+
         
 
         // Ajouter d'autres correspondances pour les exercices suivants si nécessaire
         default: return null;
     }
 }
+
+
+
