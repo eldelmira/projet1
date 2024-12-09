@@ -46,10 +46,21 @@ div {
    
 }
 
-section{
-    
-    
-}
+footer {
+   
+
+    display: flex;
+       justify-content: center;
+       padding: 5px;
+       background-color: #45a1ff;
+       color: #f5b770;
+       font-weight: bold;
+       position:relative;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       
+   }
 
 /* Style des boutons */
 button {

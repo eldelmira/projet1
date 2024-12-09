@@ -66,28 +66,6 @@ function resetQuiz() {
     alert("Le quiz a été réinitialisé. Vous pouvez recommencer !");
 }
 
-// Fonction pour télécharger les réponses sous forme de fichier texte
-function downloadAnswers() {
-    const answers = `
-Quizz de culture générale - Réponses
-
-1. Quel est le plus grand océan du monde ? Réponse : B) L'océan Pacifique
-2. Quelle est la capitale de l’Australie ? Réponse : C) Canberra
-3. Quel élément chimique a pour symbole "O" ? Réponse : B) Oxygène
-4. Qui a peint "La Joconde" ? Réponse : B) Léonard de Vinci
-5. Quelle planète est surnommée la "planète rouge" ? Réponse : A) Mars
-6. Quels pays forment le Royaume-Uni ? Réponse : A) Angleterre, B) Écosse, C) Pays de Galles, D) Irlande du Nord
-7. Quelle est la plus haute montagne du monde ? Réponse : B) Mont Everest
-8. Quel est l’océan le plus vaste ? Réponse : C) Pacifique
-9. Quelle est la langue officielle du Brésil ? Réponse : B) Portugais
-10. Quel scientifique a proposé la théorie de la relativité ? Réponse : B) Albert Einstein
-    `;
-    const blob = new Blob([answers], { type: "text/plain" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "reponses_quizz.txt";
-    link.click();
-}
 
 // Fonction pour afficher les réponses dans une nouvelle fenêtre
 function openAnswersWindow() {
@@ -108,24 +86,77 @@ function openAnswersWindow() {
             color: #333;
         }
         
-        li{
+        .bonne{
         color:green;
+        }
+        .mauvaise{
+        color: red;
         }
     </style>
 </head>
 <body>
     <h1>Réponses du Quizz</h1>
     <ul>
-        <li>Question 1 : B) L'océan Pacifique</li>
-        <li>Question 2 : C) Canberra</li>
-        <li>Question 3 : B) Oxygène</li>
-        <li>Question 4 : B) Léonard de Vinci</li>
-        <li>Question 5 : A) Mars</li>
-        <li>Question 6 : A) Angleterre, B) Écosse, C) Pays de Galles, D) Irlande du Nord</li>
-        <li>Question 7 : B) Mont Everest</li>
-        <li>Question 8 : C) Pacifique</li>
-        <li>Question 9 : B) Portugais</li>
-        <li>Question 10 : B) Albert Einstein</li>
+        <li class="mauvaise">Question 1 : A) L'océan Atlantique</li>
+        <li class="bonne">Question 1 : B) L'océan Pacifique</li>
+        <li class="mauvaise">Question 1 : C) L'océan Indien</li>
+        <li class="mauvaise">Question 1 : D) L'océan  Arctique</li>
+        <br>
+        <br>
+
+        <li class="mauvaise">Question 2 : A) Sydney</li>
+        <li class="mauvaise">Question 2 : B) Melbourne</li>
+        <li class="bonne">Question 2 : C) Canberra</li>
+        <li class="mauvaise">Question 2 : D) Brisbane</li>
+        <br>
+        <br>
+
+        <li class="mauvaise">Question 3 :A) Or</li>
+        <li class="bonne">Question 3 : B) Oxygène</li>
+        <li class="mauvaise">Question 3 : C) Osmium</li>
+        <li class="mauvaise">Question 3 : D) Oganesson</li>
+        <br>
+        <br>
+
+
+
+
+        <li class="mauvaise">Question 4 :A) Vincent van Gogh</li>
+        <li class="bonne">Question 4 : B) Léonard de Vinci</li>
+        <li class="mauvaise">Question 4 : C) Pablo Picasso</li>
+        <li class="mauvaise">Question 4 : D)  Claude Monet</li>
+        <br><br>
+
+
+
+        <li class="bonne">Question 5 : A) Mars</li>
+        <li class="mauvaise">Question 5 : B)  Jupiter</li>
+        <li class="mauvaise">Question 5 : C) Saturne</li>
+        <li class="mauvaise">Question 5 : D)  Vénus</li>
+        <br><br>
+
+        <li class="bonne">Question 6 : A) Angleterre, B) Écosse, C) Pays de Galles, D) Irlande du Nord</li>
+        <br><br>
+        <li class="mauvaise">Question 7 : A)  Mont Kilimandjaro</li>
+        <li class="bonne">Question 7 : B) Mont Everest</li>
+        <li class="mauvaise">Question 7 : C) Mont Blanc</li>
+        <li class="mauvaise">Question 7 : D) Mont McKinley</li>
+        <br><br>
+        <li class="mauvaise">Question 8 : A) Atlantique</li>
+        <li class="mauvaise">Question 8 : B) Indien</li>
+        <li class="bonne">Question 8 : C) Pacifique</li>
+        <li class="mauvaise">Question 8 : D) Arctique</li>
+        <br><br>
+        <li class="mauvaise">Question 9 : A) Espagnol</li>
+        <li class="bonne">Question 9 : B) Portugais</li>
+        <li class="mauvaise">Question 9 : C) Italien</li>
+        <li class="mauvaise">Question 9 : D)  Français</li>
+        <br><br>
+        <li class="mauvaise">Question 10 : A) Isaac Newton</li>
+        <li class="bonne">Question 10 : B) Albert Einstein</li>
+        <li class="mauvaise">Question 10 : C) Galileo Galilée</li>
+        <li class="mauvaise">Question 10 : D) Nikola Tesla</li>
+        <br><br>
     </ul>
 </body>
 </html>
