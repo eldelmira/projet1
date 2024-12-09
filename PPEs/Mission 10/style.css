@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.invoice-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #e0f7f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    color: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #006666;
+    padding-bottom: 10px;
+    background-color:  #006666;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid white;
+}
+
+
+.company-info h2 {
+    margin: 0;
+    color: #006666;
+}
+
+.invoice-info h1 {
+    color: #006666;
+    margin: 0;
+}
+
+.address-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.address {
+    width: 48%;
+}
+
+.address input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #006666;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #006666;
+    text-align: left;
+    padding: 8px;
+}
+
+table th {
+    background-color: #006666;
+    color: white;
+}
+
+.summary {
+    background-color: #e0f7f9;
+    padding: 10px;
+    border: 1px solid #006666;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.summary p {
+    margin: 10px 0;
+    text-align: right;
+}
+
+.actions button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #006666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #004c4c;
+}

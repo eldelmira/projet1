@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="invoice-container">
+        <header>
+            <div class="company-info">
+                <h2>Nom de la compagnie</h2>
+                <p>Adresse postale</p>
+                <p>Détails du contact</p>
+            </div>
+            <div class="invoice-info">
+                <h1>FACTURE</h1>
+                <p>Date : <span id="invoice-date"><input type="datetime" name="invoice-date" id="invoice-date"></span></p>
+                <p>Réf : <span><input type="text" name="invoice" id="invoice"></span></p>
+            </div>
+        </header>
+        <section class="address-section">
+            <div class="address">
+                <h3>Destinataire</h3>
+                <p>Nom :</p><input type="text" placeholder="Nom">
+                <p>Nom de la société :</p><input type="text" placeholder="Nom de la société">
+                <p>Adresse postale :</p><input type="number" placeholder="Adresse postale">
+                <p>Téléphone :</p><input type="tel" placeholder="Téléphone">
+                <p>Email :</p><input type="email" placeholder="Email">
+            </div>
+            <div class="address">
+                <h3>Envoyer à</h3>
+                <p>Nom :</p><input type="text" placeholder="Nom">
+                <p>Nom de la société :</p><input type="text" placeholder="Nom de la société">
+                <p>Adresse postale :</p><input type="number" placeholder="Adresse postale">
+                <p>Téléphone :</p><input type="tel" placeholder="Téléphone">
+                <p>Email :</p><input type="email" placeholder="Email">
+            </div>
+        </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>DESCRIPTION</th>
+                    <th>QUANTITÉ</th>
+                    <th>PRIX UNITAIRE</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="invoice-lines">
+                <tr>
+                    <td><input type="text" value="desc1"></td>
+                    <td><input type="number" value="12" min="0"></td>
+                    <td><input type="number" value="120" min="0"></td>
+                    <td class="line-total">1440</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="summary">
+            <p>Sous-Total : <span id="subtotal">1464</span></p>
+            <p>Remise : <input type="number" id="discount" value="10" min="0">%</p>
+            <p>Sous-Total moins les remises : <span id="subtotal-discounted">1317.6</span></p>
+            <p>Taux d’imposition : <input type="number" id="tax-rate" value="10" min="0">%</p>
+            <p>Taxe Totale : <span id="tax-total">146.4</span></p>
+            <p>Expédition, manutention : <input type="number" id="shipping" value="5" min="0"></p>
+            <p>SOLDE DÛ : <span id="total-due">1469</span></p>
+        </div>
+        <div class="actions">
+            <button onclick="calculate()">Calculer</button>
+            <button onclick="addLine()">Ajouter une ligne</button>
+            <button onclick="autoFill()">Remplir automatiquement</button>
+            <button onclick="resetForm()">Annuler</button>
+            <button onclick="generatePDF()">Télécharger en PDF</button>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>
