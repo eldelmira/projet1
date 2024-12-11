@@ -1,3 +1,5 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
 h3{
     text-align: right;
     font-style: italic;
@@ -7,9 +9,14 @@ h3{
 h2{
     text-align: center;
     color: blue;
+    
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: rgb(245, 243, 243);
+    font-size: 60px;
+      
 }
 h4{
-    color: rgb(255, 115, 0);
+    color: rgb(66, 235, 24);
     
 }
 
@@ -27,7 +34,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9; /* Couleur de fond douce */
+    background-image: conic-gradient( rgb(17, 180, 180) 180deg, rgb(8, 153, 146) 180deg);
+    
+
+    
+    /*background-color: #f4f4f9; /* Couleur de fond douce */
 }
 
 /* Centrer les div globalement */
@@ -45,6 +56,8 @@ div {
     
    
 }
+
+
 
 footer {
    
