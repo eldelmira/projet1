@@ -1,100 +1,100 @@
+/* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f5;
 }
 
-.invoice-container {
-    width: 80%;
-    margin: 20px auto;
-    background-color: #e0f7f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.facture-container {
+  width: 800px;
+  margin: 20px auto;
+  background: #e0f7f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header {
-    color: #f3f3f3;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #006666;
-    padding-bottom: 10px;
-    background-color:  #006666;
-    padding: 10px;
-    border-radius: 5px;
-    border: 3px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #0078D7;
 }
 
-
-.company-info h2 {
-    margin: 0;
-    color: #006666;
+.company-info h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #005A6E;
 }
 
-.invoice-info h1 {
-    color: #006666;
-    margin: 0;
+.facture-info h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #FF4A4A;
 }
 
-.address-section {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+.client-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
 }
 
-.address {
-    width: 48%;
+.client-info h3 {
+  font-size: 1.2rem;
+  color: #005A6E;
+  margin-bottom: 10px;
 }
 
-.address input {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
-    border: 1px solid #006666;
-    border-radius: 5px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 table th, table td {
-    border: 1px solid #006666;
-    text-align: left;
-    padding: 8px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
 }
 
-table th {
-    background-color: #006666;
-    color: white;
+th {
+  background: #0078D7;
+  color: white;
 }
 
-.summary {
-    background-color: #e0f7f9;
-    padding: 10px;
-    border: 1px solid #006666;
-    border-radius: 5px;
-    margin-bottom: 20px;
+.totals {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 2px solid #0078D7;
 }
 
-.summary p {
-    margin: 10px 0;
-    text-align: right;
+.totals p {
+  font-size: 1rem;
+  margin: 5px 0;
 }
 
-.actions button {
-    margin: 5px;
-    padding: 10px 15px;
-    background-color: #006666;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.totals .solde-final {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #FF4A4A;
 }
 
-.actions button:hover {
-    background-color: #004c4c;
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  background: #0078D7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #005A6E;
 }

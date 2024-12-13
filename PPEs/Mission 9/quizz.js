@@ -15,7 +15,7 @@ const correctAnswers = {
 // Fonction pour corriger le quiz
 function testqcm() {
     let score = 0;
-    const totalQuestions = Object.keys(correctAnswers).length;
+    const totalQuestions = Object.keys(correctAnswers).length;//correspond a la longeur des correctAnswers
     const resultDetails = [];
 
     // Parcours de toutes les questions

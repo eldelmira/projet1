@@ -1,158 +1,98 @@
-function calculate() {
-    let rows = document.querySelectorAll("#invoice-lines tr");
-    let subtotal = 0;
+// Fonction pour effectuer les calculs
+function calcul() {
+    // Sélectionne toutes les lignes du tableau dans le corps (<tbody>)
+    const rows = document.querySelectorAll("tbody tr");
+    // Sélectionne les éléments pour afficher les totaux calculés
+    const sousTotalElement = document.getElementById("sous_total");
+    const sousTotalMoinsRemisesElement = document.getElementById("sous_total_moins_remises");
+    const taxeTotaleElement = document.getElementById("taxe_totale");
+    const soldeFinalElement = document.getElementById("solde_final");
 
-    rows.forEach(row => {
-        let qty = parseFloat(row.querySelector("td:nth-child(2) input").value) || 0;
-        let unitPrice = parseFloat(row.querySelector("td:nth-child(3) input").value) || 0;
-        let total = qty * unitPrice;
+    // Sélectionne les champs pour les remises, les taxes et les frais d'expédition
+    const remiseInput = document.getElementById("remise");
+    const tauxImpositionInput = document.getElementById("taux_imposition");
+    const fraisExpeditionInput = document.getElementById("frais_expedition");
 
-        row.querySelector(".line-total").textContent = total.toFixed(2);
-        subtotal += total;
+    // Initialisation du sous-total à 0
+    let sousTotal = 0;
+
+    // Parcourt chaque ligne du tableau pour calculer les totaux
+    rows.forEach((row) => {
+        // Sélectionne les champs de quantité, prix unitaire et total dans la ligne
+        const quantiteInput = row.querySelector("td:nth-child(2) input");
+        const prixUnitaireInput = row.querySelector("td:nth-child(3) input");
+        const totalInput = row.querySelector("td:nth-child(4) input");
+
+        // Récupère les valeurs de quantité et de prix unitaire, avec une valeur par défaut de 0
+        const quantite = parseFloat(quantiteInput.value) || 0;
+        const prixUnitaire = parseFloat(prixUnitaireInput.value) || 0;
+
+        // Calcule le total pour la ligne (quantité * prix unitaire)
+        const total = quantite * prixUnitaire;
+        // Affiche le total dans le champ correspondant
+        totalInput.value = total.toFixed(2);
+
+        // Ajoute le total de cette ligne au sous-total général
+        sousTotal += total;
     });
 
-    document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+    // Met à jour l'affichage du sous-total
+    sousTotalElement.textContent = sousTotal.toFixed(2);
 
-    let discount = parseFloat(document.getElementById("discount").value) || 0;
-    let subtotalAfterDiscount = subtotal - (subtotal * discount / 100);
+    // Calcule les remises (réduction sur le sous-total)
+    const remise = parseFloat(remiseInput.value) || 0;
+    const sousTotalMoinsRemises = sousTotal - (sousTotal * remise) / 100;
+    // Met à jour l'affichage du sous-total après remise
+    sousTotalMoinsRemisesElement.textContent = sousTotalMoinsRemises.toFixed(2);
 
-    document.getElementById("subtotal-discounted").textContent = subtotalAfterDiscount.toFixed(2);
+    // Calcule les taxes (imposition sur le sous-total moins remises)
+    const tauxImposition = parseFloat(tauxImpositionInput.value) || 0;// 
+    const taxeTotale = (sousTotalMoinsRemises * tauxImposition) / 100;
+    // Met à jour l'affichage des taxes
+    taxeTotaleElement.textContent = taxeTotale.toFixed(2);
 
-    let taxRate = parseFloat(document.getElementById("tax-rate").value) || 0;
-    let taxTotal = subtotalAfterDiscount * taxRate / 100;
-
-    document.getElementById("tax-total").textContent = taxTotal.toFixed(2);
-
-    let shipping = parseFloat(document.getElementById("shipping").value) || 0;
-    let totalDue = subtotalAfterDiscount + taxTotal + shipping;
-
-    document.getElementById("total-due").textContent = totalDue.toFixed(2);
+    // Ajoute les frais d'expédition et calcule le solde final
+    const fraisExpedition = parseFloat(fraisExpeditionInput.value) || 0;
+    const soldeFinal = sousTotalMoinsRemises + taxeTotale + fraisExpedition;
+    // Met à jour l'affichage du solde final
+    soldeFinalElement.textContent = soldeFinal.toFixed(2);
 }
 
-function addLine() {
-    let tableBody = document.getElementById("invoice-lines");
-    let newRow = document.createElement("tr");
+// Fonction pour ajouter une nouvelle ligne dans le tableau
+function ajouterLigne() {
+    // Sélectionne le tableau
+    const table = document.getElementById("table");
+    // Crée une nouvelle ligne (<tr>)
+    const nouvelleLigne = document.createElement("tr");
 
-    newRow.innerHTML = `
-        <td><input type="text"></td>
-        <td><input type="number" min="0"></td>
-        <td><input type="number" min="0"></td>
-        <td class="line-total">0.00</td>
+    // Définit le contenu HTML de la nouvelle ligne avec des champs par défaut
+    nouvelleLigne.innerHTML = `
+      <td>Nouvelle description</td>
+      <td><input type="number" value="0"></td>
+      <td><input type="number" value="0"></td>
+      <td><input type="number" value="0" readonly></td>
     `;
 
-    tableBody.appendChild(newRow);
+    // Ajoute la nouvelle ligne au tableau
+    table.appendChild(nouvelleLigne);
 }
 
-function autoFill() {
-    let sampleData = [
-        { description: "Produit A", quantity: 5, price: 50 },
-        { description: "Produit B", quantity: 3, price: 30 }
-    ];
-
-    let tableBody = document.getElementById("invoice-lines");
-    tableBody.innerHTML = "";
-
-    sampleData.forEach(item => {
-        let newRow = document.createElement("tr");
-        newRow.innerHTML = `
-            <td><input type="text" value="${item.description}"></td>
-            <td><input type="number" value="${item.quantity}" min="0"></td>
-            <td><input type="number" value="${item.price}" min="0"></td>
-            <td class="line-total">${(item.quantity * item.price).toFixed(2)}</td>
-        `;
-        tableBody.appendChild(newRow);
-    });
-
-    calculate();
-}
-
-function resetForm() {
-    document.querySelectorAll("input").forEach(input => input.value = "");
-    document.getElementById("invoice-lines").innerHTML = `
-        <tr>
-            <td><input type="text"></td>
-            <td><input type="number" min="0"></td>
-            <td><input type="number" min="0"></td>
-            <td class="line-total">0.00</td>
-        </tr>
-    `;
-    calculate();
-}
-
-
-async function generatePDF() {
-    const { jsPDF } = window.jspdf;
-
-    // Création d'un document PDF
-    const doc = new jsPDF();
-
-    // Ajout des informations générales
-    doc.setFontSize(16);
-    doc.text("Facture", 10, 10);
-
-    // Informations de la société
-    doc.setFontSize(12);
-    doc.text("Nom de la compagnie : " + document.querySelector(".company-info h2").innerText, 10, 20);
-    doc.text("Adresse postale : " + document.querySelector(".company-info p:nth-child(2)").innerText, 10, 30);
-    doc.text("Détails du contact : " + document.querySelector(".company-info p:nth-child(3)").innerText, 10, 40);
-
-    // Informations du destinataire
-    doc.text("Destinataire :", 10, 50);
-    doc.text("Nom : " + document.querySelector(".address input:nth-of-type(1)").value, 10, 60);
-    doc.text("Nom de la société : " + document.querySelector(".address input:nth-of-type(2)").value, 10, 70);
-    doc.text("Adresse postale : " + document.querySelector(".address input:nth-of-type(3)").value, 10, 80);
-    doc.text("Téléphone : " + document.querySelector(".address input:nth-of-type(4)").value, 10, 90);
-    doc.text("Email : " + document.querySelector(".address input:nth-of-type(5)").value, 10, 100);
-
-    // Tableau des articles
-    const tableStartY = 110;
-    let currentY = tableStartY;
-
-    doc.text("Tableau des articles :", 10, currentY);
-    currentY += 10;
-
-    // Ajouter les en-têtes du tableau
-    doc.text("DESCRIPTION", 10, currentY);
-    doc.text("QUANTITÉ", 70, currentY);
-    doc.text("PRIX UNITAIRE", 110, currentY);
-    doc.text("TOTAL", 160, currentY);
-    currentY += 10;
-
-    // Récupération des données du tableau
-    const rows = document.querySelectorAll("#invoice-lines tr");
-    rows.forEach(row => {
-        const description = row.querySelector("td:nth-child(1) input").value;
-        const quantity = row.querySelector("td:nth-child(2) input").value;
-        const unitPrice = row.querySelector("td:nth-child(3) input").value;
-        const total = row.querySelector("td:nth-child(4)").innerText;
-
-        doc.text(description, 10, currentY);
-        doc.text(quantity, 70, currentY);
-        doc.text(unitPrice, 110, currentY);
-        doc.text(total, 160, currentY);
-
-        currentY += 10;
-        if (currentY > 280) { // Gérer le débordement sur une nouvelle page
-            doc.addPage();
-            currentY = 20;
+// Fonction pour réinitialiser tous les champs
+function reinitialiser() {
+    // Sélectionne tous les champs d'entrée (<input>)
+    document.querySelectorAll("input").forEach((input) => {
+        // Si le champ est un nombre, le remettre à 0
+        if (input.type === "number") {
+            input.value = 0;
+        } else {
+            // Si le champ est un texte ou autre, le vider
+            input.value = "";
         }
     });
 
-    // Résumé des totaux
-    currentY += 10;
-    doc.text("Résumé :", 10, currentY);
-    currentY += 10;
-    doc.text("Sous-total : " + document.getElementById("subtotal").innerText, 10, currentY);
-    doc.text("Remise : " + document.getElementById("discount").value + "%", 70, currentY);
-    currentY += 10;
-    doc.text("Total après remise : " + document.getElementById("subtotal-discounted").innerText, 10, currentY);
-    doc.text("Taux de taxe : " + document.getElementById("tax-rate").value + "%", 70, currentY);
-    currentY += 10;
-    doc.text("Taxe totale : " + document.getElementById("tax-total").innerText, 10, currentY);
-    doc.text("Expédition : " + document.getElementById("shipping").value, 70, currentY);
-    currentY += 10;
-    doc.text("Total dû : " + document.getElementById("total-due").innerText, 10, currentY);
-
-    // Télécharger le fichier PDF
-    doc.save("facture.pdf");
+    // Réinitialise également les champs de calcul à zéro
+    document.getElementById("sous_total").textContent = "0.00";
+    document.getElementById("sous_total_moins_remises").textContent = "0.00";
+    document.getElementById("taxe_totale").textContent = "0.00";
+    document.getElementById("solde_final").textContent = "0.00";
 }
