@@ -10,12 +10,45 @@ h3{
     color: black;
 }
 
-h3:hover{
-    color: white;
+.body{
+    background-image: url('image1.gif');
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+    color: inherit;
+    font: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    
+
+}
+
+
+body{
+    background-image: url('image1.gif');
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+    color: inherit;
+    font: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 100%;
+}
+
+.d{
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgb(8, 131, 59) 50%, rgba(237, 221, 83, 1) 100%);
+    padding-block: 10px;
+    height: 77px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
 }
 
 ul{
-    display: inline-table;
+    display: inline-block;
     
 }
 nav{
@@ -48,10 +81,7 @@ div{
     padding: 20px;
 }
 
-div:hover{
-  background-color: black;
 
-}
 
 footer {
    
@@ -90,3 +120,252 @@ footer {
         background-color: teal;
     } 
     }  
+
+
+    a, ul{
+    
+        list-style: none;
+        text-decoration: none;
+        padding: auto;
+        padding-left: 50px;
+        padding-top: 10px;
+        font-size: 16px;
+        color: white;
+        height: 60px;
+        border-top-left-radius: 10px;
+        margin: 20px;
+        padding-top: 16px;
+        
+        
+        
+        
+    }
+    
+    li{
+        padding-bottom: 7px;
+        padding: auto;
+        padding-block: 10px;
+        
+        
+        
+       
+    }
+    
+    footer {
+       
+    
+     display: flex;
+        justify-content: center;
+        padding: 5px;
+        background-color: #45a1ff;
+        color: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        
+    }
+    
+    
+    nav > ul{
+        display: inline-block;
+        box-shadow: 0 0 14px rgb(10, 10, 10);
+        background-color: rgb(24, 9, 9);
+        width: 95%;
+        border-radius: 20px;
+        top: 75px;
+        position: fixed;
+        
+         
+        
+    }
+    
+    
+      
+     
+    
+    
+   
+    .sousmenu{
+        display: inline-block;
+        position: absolute; 
+        padding-bottom: 10px;
+        border-spacing: 1em;
+        box-shadow:0 0 15px rgb(5, 4, 4);
+        height: fit-content;
+        background-color: #45a1ff;
+        width: 100px;
+        
+        
+        
+        
+        
+    }
+    
+    
+    .sousmenu li:hover a{
+        color: #EEE;
+        font-weight: bold;
+        border:  1px solid lightslategray;
+        border-radius: 10px;
+        margin-bottom: 12px;
+       
+        
+         
+        
+    }
+    
+    .nav .sousmenu li:hover{
+        display: inline-block;
+        background-color: RGB(210,77,60);
+        width: 100px;
+        height: 60px;
+        
+       
+    }
+    
+    
+    nav li:hover .sousmenu{
+        display:inline-block;
+        border: 1px solid rgb(34, 163, 77);
+        padding-top: 3px;
+        width: 150px;
+        padding-right: 100px;
+        padding-left: 20px;
+        
+        
+        
+    }
+    
+    
+    .none{
+        display: inline-block;
+    }
+    
+    
+    nav {
+        
+        /*background-color: blue; */
+        /*background: #2A7B9B;*/
+        
+        height:130px;
+        
+        
+         
+    }
+    
+    
+    .background{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    
+    
+    nav .sousmenu li {
+        text-align: center;
+        background-color: #2e4053 ;
+        width: 200px;
+        padding: 12px;
+        border-style: ridge;
+        border-radius: 10px;
+        top: 20px;
+    
+        
+    }
+     
+    
+     nav  .sousmenu li:hover{
+    opacity: 0.8;
+    width: 210;
+     }
+    nav input[type=checkbox]:checked ~ ul{
+        display: block;
+    }
+    
+    @media screen and (max-width: 680px){
+        .none{
+            flex-direction: column; /* Stack items on smaller screens */
+            display: block;
+            color: #fff;
+            background-color: rgba(29, 197, 151,0.97);
+            text-align: center;
+            padding: 12px 0;
+            padding-bottom: 30px;
+           
+        }
+    
+        .sousmenu{
+            display: none;
+            text-transform: capitalize;
+            border-radius:  1px solid teal;
+            border-spacing: 2em;
+            box-sizing: border-box;
+                
+        }
+    
+        .body1{
+            height: 500px;    }
+    
+        .sousmenu:hover{
+            display:flexbox;
+        }
+    
+        nav > ul{
+            display: none;
+            height: fit-content;
+        }
+    
+        nav > ul > li {
+            width: 100%; /* Full width for list items */
+            padding-bottom: 20px;
+            
+            
+           
+        }
+        nav{
+            background-color: black;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: inherit;
+            color: inherit;
+            font: inherit;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        
+        a, ul{
+            list-style: none;
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+            
+        }
+    
+        nav .sousmenu {
+            display: none; /* Masquer le sous-menu par défaut */
+            position:relative;
+            left: 5px;
+            top: 100%;
+            margin: auto;
+            cursor: pointer;
+            border-bottom: 3px solid red;
+    }
+    }
+    
+ 
+    
+    nav .javascript:hover{
+        border-top: 5px solid green ;
+        background-color: RGBa(228, 77, 38,0.15);
+        opacity: 0.7;
+    }
+    
+    
+    
+    

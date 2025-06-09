@@ -1,40 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
-    <script src="cal.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TP5 – Calculatrice en JS</title>
+  <script src="cal.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    
-    <center>
-    <h1>Tp5 Calculatrice en JS</h1>
-    <div>
-    <input class="t"  type="text" placeholder="premier_chiffre " type="number" name="t1" id="t1" >
-    <input class="t" type="text" placeholder="deuxième_chiffre " type="number" name="t2" id="t2" >
-    </div>
 
-<div>
-   <button onclick="addition()">+</button>
-   <button onclick="soustraction()">-</button>
-   <button onclick="division()">/</button>
-   <button onclick="multiplication()">x</button>
-</div>
+  <h1>TP5 – Calculatrice en JavaScript</h1>
 
+  <div class="input-row">
+    <input type="text" placeholder="Premier chiffre" id="t1" />
+    <input type="text" placeholder="Deuxième chiffre" id="t2" />
+  </div>
 
+  <div class="btn-row">
+    <button onclick="addition()">+</button>
+    <button onclick="soustraction()">−</button>
+    <button onclick="division()">÷</button>
+    <button onclick="multiplication()">×</button>
+  </div>
 
-<div>
-    <button onclick="parite()">Parite</button>
-    <button onclick="permute()">Permute</button>
-</div>
+  <div class="btn-row">
+    <button onclick="parite()">Parité</button>
+    <button onclick="permute()">Permuter</button>
+  </div>
 
-<div>
-    <input type="text" class="t34" placeholder="Résultat" name="t3" id="t3" readonly="" >
-    <input type="text" class="t34" placeholder="Pair ou impair" name="t4" id="t4" readonly="">
-</div>
-</center>
+  <div class="result-row">
+    <input type="text" class="t34" placeholder="Résultat" id="t3" readonly />
+    <input type="text" class="t34" placeholder="Pair ou impair" id="t4" readonly />
+  </div>
 
+  <a class="back-link" href="../index.html">← Retour</a>
 </body>
 </html>

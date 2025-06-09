@@ -149,7 +149,9 @@ li{
         width: 140px;
     }
 
-   
+   hr{
+    width: fit-content;
+   }
     
     
     

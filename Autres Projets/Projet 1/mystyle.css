@@ -58,6 +58,8 @@ h1, p, h3{
    justify-items: left;
    margin-top: 30px;
    border-radius: 5px;
+   border-style:ridge;
+   
    
 }
 

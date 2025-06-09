@@ -1,41 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="tik.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="tik.js" defer></script>
 </head>
 <body>
-    <center>
-    
-    <div class="tictactoe">
-        
-        
-        <h5>TIC-TAC-TOE</h5>
 
-       <div class="grid">
-        <input class="casse" type="text" id="b1">
-        <input class="casse" type="text" id="b2">
-        <input class="casse" type="text" id="b3">
-        <input class="casse" type="text" id="b4">
-        <input class="casse" type="text" id="b5">
-        <input class="casse" type="text" id="b6">
-        <input class="casse" type="text" id="b7">
-        <input class="casse" type="text" id="b8">
-        <input class="casse" type="text" id="b9">
+  <main class="tictactoe">
+    <h1>Tic-Tac-Toe</h1>
 
-       <!--<h2 class="message">Congrats you won!!</h2>-->
-        <button onclick="resetGame()" style="width: 450px;" >Reset</button>
-        
-    </center>
-        
-       </div>
-  <center style="padding-top: 20px;">
-    <button style="width: 450px; " ><a  href="../../index.html">Retour</a></button>
-    
-  </center>
-       
+    <div class="grid">
+      <input type="text" class="case" id="b1" readonly>
+      <input type="text" class="case" id="b2" readonly>
+      <input type="text" class="case" id="b3" readonly>
+      <input type="text" class="case" id="b4" readonly>
+      <input type="text" class="case" id="b5" readonly>
+      <input type="text" class="case" id="b6" readonly>
+      <input type="text" class="case" id="b7" readonly>
+      <input type="text" class="case" id="b8" readonly>
+      <input type="text" class="case" id="b9" readonly>
+    </div>
+
+    <button class="btn" onclick="resetGame()">Réinitialiser</button>
+
+    <a class="btn back" href="../../index.html">← Retour</a>
+  </main>
+
 </body>
 </html>

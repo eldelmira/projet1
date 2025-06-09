@@ -1,0 +1,13 @@
+.profile{
+    border: 1px solid black;
+    border-radius: 50%;
+    border-style: dotted;
+    width: 80px;
+    height: 80px;
+    background-color: bisque;
+}
+span{
+    width: 100%;
+    background-color: aquamarine;
+    border-radius: 3px;
+}

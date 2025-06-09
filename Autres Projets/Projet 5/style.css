@@ -1,114 +1,94 @@
-body{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-background-color: lightblue;
-}
-
-
-h5{
-    color: white;
-    position:relative;
-    background-color: lightgray;
-    filter: blur(0.5px);
-    filter: brightness(22px);
-    text-shadow: 0 0 10px black;
-
-
-}
-
-
-
-
-
-
-.tictactoe{
-    display: grid;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #d4ebf2;
+    font-family: Arial, sans-serif;
+  }
+  
+  main.tictactoe {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    font-size: 50px;
-    margin-left: auto;
-    margin-right: auto;
     align-items: center;
-    box-shadow: 0 0 10px black;
-    margin-top: 20px;
-    
-    width: 50%;
-    border-radius: 10px;
+    margin: 40px auto;
     padding: 30px;
-    
-}
-
-
-.grid{
+    width: 90%;
+    max-width: 500px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .grid {
     display: grid;
-    flex-flow: column;
-    grid-template-columns: repeat(3,150px);
-    grid-template-rows: repeat(3,150px);
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-     
-    
-}
-input{
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .case {
+    font-size: 2em;
     font-weight: bold;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color: darkolivegreen;
-    font-size: 150%;
     text-align: center;
+    background-color: #88a885;
+    color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
     cursor: pointer;
-    
-    
-}
-
-input .b1 .b2:hover{
-    fill: blue;
-    object-fit: fill;
-    top: 50px;
-
-    
-
-}
-
-a{
+    transition: background-color 0.2s;
+  }
+  
+  .case:hover {
+    background-color: #a2c3a1;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    transition: background-color 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  
+  a.back {
+    display: block;
     text-decoration: none;
-}
-
-
-@media screen and (max-width:750px){
-
-
-
-    body{
-        background-color: darkslategray;
-        display: block;
-
+    text-align: center;
+    background-color: #0077cc;
+    margin-top: 20px;
+  }
+  
+  a.back:hover {
+    background-color: #005fa3;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .grid {
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: repeat(3, 80px);
     }
-   
-   .tictactoe{
-    width: 100%;
-   }
-   
-   
-   
-   input{
-    width: 100%;
-    align-items: center;
-    
-   }
-    
-}  
-
-@media screen and (max-width:450px){
-    
-    
-    
-    body{
-        background-color: darkslategray;
+  
+    .case {
+      font-size: 1.5em;
     }
-    
-}  
-
-
+  
+    .btn {
+      font-size: 1em;
+    }
+  }
+  
