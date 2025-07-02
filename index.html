@@ -21,8 +21,7 @@
     
     <br>
 <nav>
-            <label class="none" for="Menu">Menu</label>
-            <input class="none" type="checkbox" value="Menu">
+            <div class="menu-toggle">Menu</div>
         <ul>
             <li class="html"><a href="#">HTML & CSS</a>
             <ul class="sousmenu" style="background-color: rgba(180, 146, 255); ">
@@ -54,8 +53,8 @@
         
             <li class="bdd"><a href="#">Epreuve 5</a>
             <ul class="sousmenu" style="background-color: rgba(0, 165, 198); ">
-                <li><a href="VEILLE TECHNOLOGIE/index.html">VEILLE-TECH</a></li>
-                <li><a href="#">STAGE 1 & 2</a></li>
+                <li><a href="VEILLE TECHNOLOGIE/index.html">VEILLE</a></li>
+                <li><a href="#">STAGE</a></li>
             
         </ul>
         </li>
@@ -64,7 +63,7 @@
     
             <li class="php"><a href="#">Réseaux</a>
             <ul class="sousmenu" style="background-color: rgba(209, 158, 203); ">
-                <li><a href="packet tracer/index.html">Cisco Louvre</a></li>
+                <li><a href="packet tracer/index.html">Cisco</a></li>
                 <li><a href="#">TP2</a></li>
             
             </ul>
@@ -76,7 +75,7 @@
             <li class="mission"><a href="#">Missions</a>
             <ul class="sousmenu" style=" background-color: rgba(244, 179, 147);">
                 <li><a href="PPEs/Mission 1/index.html">Mission1</a></li>
-                <li><a href="PPEs/Misson 2/index.html">Mission2</a></li>
+                <li><a href="PPEs/Mission 2/index.html">Mission2</a></li>
                 <li><a href="PPEs/Mission 3/index.html">Mission3</a></li>
                 <li><a href="PPEs/Mission 4/index.html">Mission4</a></li>
                 <li><a href="PPEs/Mission 5/index.html">Mission6</a></li>
@@ -128,7 +127,34 @@
 </div>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav > ul');
+
+    menuToggle.addEventListener('click', () => {
+        navUl.classList.toggle('open');
+    });
+
+    // Gestion sous-menus au clic sur mobile
+    const menuItems = document.querySelectorAll('nav > ul > li');
+
+    menuItems.forEach(item => {
+        const submenu = item.querySelector('.sousmenu');
+        if (submenu) {
+            // On intercepte le clic sur le lien parent uniquement pour mobiles
+            item.querySelector('a').addEventListener('click', e => {
+                if (window.innerWidth <= 680) {
+                    e.preventDefault(); // Empêche le lien de naviguer
+                    submenu.classList.toggle('open');
+                }
+            });
+        }
+    });
+});
 </script>
+
+
 <footer>© 2024 Eldelmira SMART Porfolio</footer>
 </body>
 </html>
