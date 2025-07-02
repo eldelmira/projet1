@@ -1,77 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Projet Louvre</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Réseau - Louvre</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f7fa;
-      color: #2c3e50;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
     }
-
     header {
-      background-color: #34495e;
+      background-color: #003366;
       color: white;
-      padding: 2rem 1rem;
+      padding: 1rem;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
-    main {
-      max-width: 800px;
+    .container {
+      max-width: 1000px;
       margin: 2rem auto;
-      background-color: white;
+      background: white;
       padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-
     img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      color: teal;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #003366;
+      color: white;
+      position: fixed;
+      bottom: 0;
       width: 100%;
-      border: 2px solid #ccc;
-      border-radius: 8px;
+    }
+    .button {
+      background-color: #0066cc;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
       margin-top: 1rem;
     }
-
-    .caption {
-      text-align: center;
-      font-style: italic;
-      color: #7f8c8d;
-      margin-top: 0.5rem;
-    }
-
-    .caption2 {
-      text-align: center;
-      font-style: italic;
-      color: #091b1d;
-      margin-top: 0.5rem;
-      width: 100%;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      margin-top: 1rem;
+    .button:hover {
+      background-color: #004999;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Projet "Louvre" – Simulation réseau</h1>
+    <h1>Simulation Réseau du Louvre</h1>
   </header>
-  <a href="../index.html">Retour</a>
 
-  <main>
-    <p>Ce projet est une modélisation de l'infrastructure réseau du musée du Louvre réalisée avec Cisco Packet Tracer.</p>
+  <div class="container">
+    <h2>Objectif du projet</h2>
+    <p>Dans le cadre de mon apprentissage des réseaux, j'ai réalisé une simulation complète de l'infrastructure réseau d'un musée type "Louvre" à l'aide de Cisco Packet Tracer. L'objectif était de concevoir une architecture réaliste, sécurisée et segmentée.</p>
 
-    <img src="Capture d'écran 2025-06-05 083755.png" alt="Simulation de l'infrastructure réseau du Louvre">
-    <div class="caption">Capture d'écran de la simulation dans Packet Tracer</div>
+    <h2>Topologie réseau</h2>
+    <img src="Capture%20d%27%C3%A9cran%202025-06-05%20083755.png" alt="Topologie Réseau du Louvre">
 
-    <div class="caption2">
-        <p>Pour réaliser la simulation de cisco du projet Louvre, jai du </p>
-    </div>
-  </main>
+    <h2>Architecture technique</h2>
+    <ul>
+      <li>Routeur Cisco 2911 pour l'accès Internet</li>
+      <li>Switch multilayer Cisco 3560-24PS</li>
+      <li>2 Switchs d'accès Cisco 2960</li>
+      <li>Serveur Proxmox pour la virtualisation</li>
+      <li>Point d'accès WiFi pour les visiteurs</li>
+    </ul>
 
+    <h2>Segmentation en VLANs</h2>
+    <ul>
+      <li>VLAN 10 - Administration</li>
+      <li>VLAN 20 - Visiteurs</li>
+      <li>VLAN 30 - Expo Interactive</li>
+      <li>VLAN 40 - Sécurité</li>
+      <li>VLAN 50 - Base de paiement</li>
+      <li>VLAN 60 - Réseau scientifique</li>
+      <li>VLAN 99 - Serveurs / Gestion</li>
+    </ul>
 
+    <h2>Sécurité et Services</h2>
+    <ul>
+      <li>Routage inter-VLAN (Layer 3)</li>
+      <li>Accès SSH sécurisé</li>
+      <li>VTP sécurisé par mot de passe</li>
+      <li>Plan d'adressage IP structuré</li>
+    </ul>
+
+    <button class="button" onclick="alert('Contactez-moi pour plus de détails sur le projet !')">En savoir plus</button>
+  </div>
+
+  <footer>
+    &copy; 2025 - Mon Portfolio Réseau
+  </footer>
 </body>
 </html>
